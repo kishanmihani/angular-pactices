@@ -319,8 +319,45 @@
             />
           </svg>
         </a>
+        <!-- <app-top-bar></app-top-bar> -->
+        <!-- <h2>Product list</h2>
+        <div *ngFor="let product of  products">
+        
+          <h3 [title]="product.name + ' details'">
+            {{ product.name }}
+        </h3>
+        <p *ngIf="product.description">
+          Description: {{ product.description }}
+        </p> -->
+        <!-- <button type="button" (click)="share()"> -->
+          Share
+        <!-- </button> -->
+        <!-- <app-product-alerts ></app-product-alerts>  -->
+        <a href="./product-alerts/product-alerts.component.html">jj</a>
+        <!-- </div> -->
       </div>
+      <button
+  type="button"
+  disabled="canClick"
+  (click)="sayMessage()">
+  Trigger alert message
+</button>
+<h2>Hello World: ngIf!</h2>
+
+<button type="button" (click)="onEditClick()">Make text editable</button>
+
+<div *NgIf="canEdit; else noEdit">
+    <p>You can edit the following paragraph.</p>
+</div>
+
+<ng-template #noEdit>
+    <p>The following paragraph is read only. Try clicking the button!</p>
+</ng-template>
+
+<p [contentEditable]="canEdit">{{ message2 }}</p>
     </div>
+  </div>
+  <div id="chart">
   </div>
 </main>
 
@@ -332,5 +369,10 @@
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-
+<script>
+  function share(){
+    alert('dfghjkl')
+  }
+  
+</script>
 <router-outlet />
